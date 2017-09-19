@@ -1,7 +1,6 @@
 var GoogleSpreadsheet = require('google-spreadsheet');
 var async = require('async');
 var LocalStorage = require('node-localstorage').LocalStorage;
-localStorage = new LocalStorage('./scratch');
 const constanta = require('../constanta');
 
 // spreadsheet key is the long id in the sheets URL
@@ -9,6 +8,7 @@ const constanta = require('../constanta');
 var sheet;
 
 function run(options){
+    const localStorage = new LocalStorage(options.dataLocation || './scratch');
 
     //cek mandatory
     var isError = 0;
