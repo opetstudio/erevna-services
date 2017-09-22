@@ -133,6 +133,10 @@ function run(options){
             console.log(dataJsonString);
             localStorage.setItem(localStorageKeyName, dataJsonString);
 
+            if(options.jobCallback){
+                options.jobCallback({dataJson:dataJson});
+            }
+
 //            console.log('data sync: ',dataJsonFromLocalstorage);
 
     //      // cells have a value, numericValue, and formula

@@ -32,7 +32,7 @@ function getParam(arg,key){
     return result;
 }
 
-function execute(args, creds, xTheJob){
+function execute(args, creds, xTheJob, jobCallback){
     arg = args || arg;
     if(arg.length == 0) return;
     var country = getParam(arg,'country');
@@ -89,7 +89,8 @@ function execute(args, creds, xTheJob){
         max_row:maxrow,
         gdoc:gdoc,
         job: theJob,
-        dataLocation: dataLocation
+        dataLocation: dataLocation,
+        jobCallback:jobCallback
 
     }
     console.log('options3==>', options3);
