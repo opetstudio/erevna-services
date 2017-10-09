@@ -42,6 +42,7 @@ function execute(args, creds, xTheJob, jobCallback){
     var storagekey = getParam(arg,'storagekey');
     var sheetnumber = getParam(arg,'sheetnumber');
     var dataLocation = getParam(arg,'datalocation');
+    var islocalsave = getParam(arg,'islocalsave');
 //    var job_key = getParam(arg,'job') || 'def';
 
     var theJob = xTheJob;
@@ -89,6 +90,7 @@ function execute(args, creds, xTheJob, jobCallback){
         max_row:maxrow,
         gdoc:gdoc,
         job: theJob,
+        islocalsave: islocalsave || "n", //y or n
         dataLocation: dataLocation,
         jobCallback:jobCallback
 

@@ -131,7 +131,7 @@ function run(options){
             //save data dari google spreadsheet
             var dataJsonString = JSON.stringify(dataJson);
             console.log(dataJsonString);
-            localStorage.setItem(localStorageKeyName, dataJsonString);
+            if(options.islocalsave == 'y') localStorage.setItem(localStorageKeyName, dataJsonString);
 
             if(options.jobCallback){
                 options.jobCallback({dataJson:dataJson});
