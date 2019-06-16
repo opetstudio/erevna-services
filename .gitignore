@@ -1,0 +1,31 @@
+.gradle
+.idea
+scratch/
+node_modules/
+app/webapp/node_modules
+!app/webapp/node_modules/country-select-js/build/js/*.js
+#utils/
+mostcommand.txt
+uploads/
+server_ori.js
+.DS_Store
+service-account-creds.json
+
+#stylesheet menggunakan scss akan dicompile ke style.css jadi tidak perlu di push file style.css nya
+app/webapp/resources/css/style.css
+app/webapp/resources/css/style.css.map
+
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+.ebextensions/
+.openshift/
+.elasticbeanstalk/
+app/webapp/resources/css/.sass-cache/
+app/webapp/resources/js/libs/bower_components/
+app/webapp/resources/js/libs/bower.json
+app/webapp/resources/js/libs/lab1/
+*.log
+app/webapp/.sass-cache
