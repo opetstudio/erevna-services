@@ -20,5 +20,8 @@ module.exports.user = require('./services/UserService')
 module.exports.security = require('./services/Security')
 module.exports.errorCode = require('./services/ErrorCode')
 module.exports.model = {
-  user: require('./models/User')
+  user: require('./models/User'),
+  role: require('./models/Role'),
+  userrole: require('./models/UserRole'),
+  product: require('./models/Product')
 }

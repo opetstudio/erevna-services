@@ -181,7 +181,7 @@ function authAuthorizationToken (request, callback) {
   //   // request.headers.authorization = tk
   //   // return h.authenticated({ credentials: p })
   //   }
-  console.log(`jwt verify secret=${secret}<===>token=${token}`)
+  // console.log(`jwt verify secret=${secret}<===>token=${token}`)
   return Jwt.verify(token, secret, { algorithms: ['HS256'] }, function (err, payload) {
     if (err) {
       console.log('error jwt verify=', err)
